@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Ago-2023 às 13:51
+-- Tempo de geração: 04-Set-2023 às 16:43
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -57,8 +57,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_reset_tokens_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(5, '2023_08_28_114508_create_produtos_tabela', 1);
+(4, '2019_12_14_000001_create_personal_access_tokens_table', 1);
 
 -- --------------------------------------------------------
 
@@ -94,18 +93,6 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `produtos_tabela`
---
-
-CREATE TABLE `produtos_tabela` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Estrutura da tabela `users`
 --
 
@@ -125,7 +112,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'nicolas', 'nicolas@nicolas.com', NULL, '$2y$10$cdfIhjLucBp7OscXgCrM5OPB/eOEQLhyCb0f0wZs1y8ZpWKGdvpLS', NULL, '2023-08-28 14:50:32', '2023-08-28 14:50:32');
+(1, 'Higor', 'higor@higor.com', NULL, '$2y$10$f2CzvuEqHuveKxA0x77FL.IE5APEvitE7.3rKi4dnJOHPv56vePE6', NULL, '2023-09-04 17:47:58', '2023-09-04 17:47:58');
 
 --
 -- Índices para tabelas despejadas
@@ -159,12 +146,6 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Índices para tabela `produtos_tabela`
---
-ALTER TABLE `produtos_tabela`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Índices para tabela `users`
 --
 ALTER TABLE `users`
@@ -185,18 +166,12 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de tabela `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de tabela `produtos_tabela`
---
-ALTER TABLE `produtos_tabela`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
